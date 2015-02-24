@@ -94,7 +94,7 @@ module RailsERD
       def type_description
         type.to_s.tap do |desc|
           desc << " #{limit_description}" if limit_description
-          desc << " ∗" if mandatory? # Add a hair space + low asterisk (Unicode characters).
+          desc << "&#x200a;&#x2734;" if mandatory? # Add a hair space + low asterisk (Unicode characters).
         end
       end
 
